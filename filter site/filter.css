@@ -42,15 +42,24 @@ body{
 
 .products{
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
 .product{
     width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
 }
 
 .img{
     width: 150px;
     height: 250px;
     object-fit: contain;
+}
+
+.name{
+    font-weight: 300;
 }
