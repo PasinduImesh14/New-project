@@ -50,7 +50,7 @@ body{
 }
 
 .img{
-    width: 150;
-    height: 250;
+    width: 150px;
+    height: 250px;
     object-fit: contain;
 }
