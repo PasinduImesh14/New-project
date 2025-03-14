@@ -39,3 +39,18 @@ body{
 .content{
     flex: 4;
 }
+
+.products{
+    display: flex;
+    gap: 10px;
+}
+
+.product{
+    width: 350px;
+}
+
+.img{
+    width: 150;
+    height: 250;
+    object-fit: contain;
+}
