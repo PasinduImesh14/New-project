@@ -72,18 +72,33 @@ body {
     font-weight: 1;
 }
 
+/* Categories Section */
 .cats {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
+    margin-top: 10px;
 }
 
 .cat {
     cursor: pointer;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 300;
-    padding: 5px;
+    padding: 10px;
+    text-align: center;
+    transition: 0.3s;
 }
+
+.cat:hover {
+    background-color: #f0f0f0;
+}
+
+/* Horizontal Line for Separation */
+.cat:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 8px;
+}
+
 
 /* Content Section */
 .content {

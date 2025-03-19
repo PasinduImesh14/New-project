@@ -242,22 +242,26 @@ const displayProducts = (filteredProducts) => {
     });
 
     const setCategories = () => {
-        const allCats = data.map(item=> item.cat);
-        const categories = ["All",...allCats.filter((item,i)=> {
-            return allCats.indexOf(item)===i}),];
-            categoriesContainer.innerHTML = categories.map(cat=>
+        const allCats = data.map(item => item.cat);
+        const categories = ["All", ...allCats.filter((item, i) => allCats.indexOf(item) === i)];
+    
+        categoriesContainer.innerHTML = categories
+            .map((cat, index) =>
                 `
                 <span class="cat">${cat}</span>
+                ${index !== categories.length - 1 ? "<hr>" : ""}
                 `
-            ).join("");
-
-
-            categoriesContainer.addEventListener("click", (e)=>{const selectedCat = e.target.textContent;
-                selectedCat === "All"
+            )
+            .join("");
+    
+        categoriesContainer.addEventListener("click", (e) => {
+            const selectedCat = e.target.textContent;
+            selectedCat === "All"
                 ? displayProducts(data)
-                : displayProducts(data.filter((item)=> item.cat === selectedCat));
-            });
-        };
+                : displayProducts(data.filter((item) => item.cat === selectedCat));
+        });
+    };
+    
 
         const setPrices = () => {
             const priceList = data.map((item)=> item.price);
