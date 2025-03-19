@@ -12,6 +12,7 @@ body {
     width: 100%;
     font-size: 20px;
     font-weight: bold;
+    border-bottom: 2px solid black; /* Line below navigation */
 }
 
 .nav-item {
@@ -20,6 +21,11 @@ body {
     color: white;
     cursor: pointer;
     transition: 0.3s;
+    border-right: 2px solid white; /* Separator lines */
+}
+
+.nav-item:last-child {
+    border-right: none; /* Remove border on last item */
 }
 
 /* Background Colors for Separation */
@@ -33,21 +39,33 @@ body {
     opacity: 0.8;
 }
 
+/* Main Container */
 .container {
     display: flex;
     padding: 50px;
 }
 
+/* Left Menu */
 .leftMenu {
     flex: 1;
+    padding-right: 20px;
 }
 
+/* Vertical Separator */
+.separator {
+    width: 1px;
+    background: #ccc;
+    margin: 0 20px;
+}
+
+/* Search Bar */
 .search {
     padding: 10px;
     width: 200px;
     border: 1px solid black;
 }
 
+/* Category Section */
 .h1 {
     font-size: 30px;
     color: #555555;
@@ -67,28 +85,34 @@ body {
     padding: 5px;
 }
 
+/* Content Section */
 .content {
     flex: 4;
 }
 
+/* Product Grid */
 .products {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
 
+/* Individual Product */
 .product {
     width: 350px;
     display: flex;
     flex-direction: column;
     gap: 5px;
     align-items: center;
+    border-bottom: 1px solid #ccc; /* Line to separate products */
+    padding-bottom: 10px;
 }
 
 .img {
     width: 150px;
     height: 250px;
     object-fit: contain;
+    cursor: pointer;
 }
 
 .name {
